@@ -61,6 +61,43 @@ var fruits: [String] = ["apple","banana","cherry"]
 ## Optional
 An optional represents two possibilities: Either there is a value, and you can unwrap the optional to access that value, or there isn't a value at all.
 
+An optional is an __enum__!!
+```swift
+struct Optional<T> {
+    case none
+    case some<T>
+}
+```
+```swift
+let hello: String? = ...
+print(hello)
+
+// Logic behind the scene
+switch hello {
+    case .none: // throw an error
+    case .some(let data): print(data)
+}
+```
+
+### `??`
+`??` is the "optional coalescing operator", which does optional defaulting.   
+`a ?? b`  
+`a` - optional;
+`b` - value to use if the optional is not set
+```swift
+let x: String? = ...
+let y = s ?? "foo"
+
+// Logic behind
+switch x {
+    case .none: y = "foo"
+    case. some(let data): y = data
+}
+```
+
+### Optional Chaining
+
+
 ## Control Transfer Statements
 ### `continue`
 The `continue` statement tells a loop to stop what it's doing and start again at the beginning of the next iteration through the loop.     
@@ -284,3 +321,46 @@ let boilingPointOfWater = Celsius(fromKelvin: 273.15)
 ```
 - `fromFahrenheit` and `fromKelvin` are argument labels for use when calling the initializer
 - `fahrenheit` and `kelvin` are parameter names to be used inside methods
+----
+Swift provides an automatic argument label for every parameter in an initializer if not provided.
+```swift
+struct Color {
+    var red, green, blue: Double
+    init(red: Double, green: Double, blue: Double) {
+        self.red = red
+        self.green = green
+        self.blue = blue
+    }
+
+    init(white: Double) {
+        red = white
+        green = white
+        blue = white
+    }
+}
+
+let white = Color(white: 0.5)
+let magenta = Color(red: 1.0, green: 0.0, blue: 1.0)
+```
+
+### Initializer parameters without argument labels
+Use underscore `-`
+```swift
+struct Celsius {
+    var tempInC: Double
+
+    init(fromFahrenheit fahrenheit: Double){
+        tempInC = (fahrenheit - 32.0) 1.8
+    }
+
+    init(fromKelvin kelvin: Double) {
+        tempInC = kelvin - 273.15
+    }
+
+    init(_ celsius: Double) {
+        tempInC = celsius
+    }
+}
+
+let boiling = Celsius(100.0)
+```
