@@ -50,6 +50,38 @@ ZStack is a combiner that stacks elements on top of each other
 ### HStack
 HStack is a horizontal stack
 
+## Strings and Characters
+### String Interpolation
+You can use __extended string delimiters__ to create strings containing characters that would otherwise be treated as a string interpolation. For example,
+```swift
+print(#"Write a string using\(multiplier)."#)
+// Prints "Write a string using\(multiplier)."
+```
+To use string interpolation inside a string that uses extended delimiters, match the number of number signs after the backslash to the number of number signs at the beginning and end of the string. for example,
+```swift
+print(#"6 times 7 is \#(6*7)."#)
+// Prints "6 times 7 is 42."
+```
+
+### Counting Characters
+Swift's use of __extended grapheme clusters" for `Character` values means that string concatenation and modification may not always affect a string's character count.
+```swift
+var word = "cafe"
+print("The number of characters in \(word) is \(word.count)")
+// Prints "The number of characters in cafe is 4"
+
+word += "\u{301}"  // COMBINING ACUTE ACCENT, U+0301
+print("The number of characters in \(word) is \(word.count)")
+// Prints "The number of characters in café is 4"
+```
+
+### String Indices
+Since different characters can require different amounts of memory to store, so in order to determine which `Character` is at a particular position, you must iterate over each Unicode scalar from the start or end of that `String`. Therefore, Swift string __cannot__ be indexed by integer values.
+
+- `startIndex`: the position _of_ the first `Character` of a `String`
+- `endIndex` : the position _after_ the last character in a `String`
+- If a `String` is empty, `startIndex` is equal to `endIndex`.
+
 ## Arrays
 ### Declaration with data type
 ```swift
@@ -79,11 +111,11 @@ switch hello {
 }
 ```
 
-### `??`
-`??` is the "optional coalescing operator", which does optional defaulting.   
-`a ?? b`  
-`a` - optional;
-`b` - value to use if the optional is not set
+### `??` Nil-Coalescing Operator
+`??` unwraps an optional `a` if it contains a value, or returns a default value `b` if `a` is `nil`. It's shorthand for
+`a != nil ? a! : b`
+> IF the value of `a` is a non-`nil`, the value of `b` isn't evaluated. This is known as _short-circuit evaluation_.
+
 ```swift
 let x: String? = ...
 let y = s ?? "foo"
@@ -284,8 +316,16 @@ switch productBarcode {
 }
 ```
 
+## Protocols and Extensions
+Classes, enumerations, and structures can all adopt protocols.
+
+### Extensions
+USe `extensions` to add functionality to an existing type, such as new methods and computed properties.
+
+
 ## Structures and Classes
 As a general guideline, prefer structures because they're easier to reason about, and use classes when they're appropriate or necessary. In practice, this means most of the custom types you define will be structures and enumerations.
+> Swift is able to detect changes in structs and not classes.
 
 ### Structures and Enumerations Are Value Types
 A __value type__ is a type whose value is copied when it's assigned to a variable or constant, or when it's passed to a function.
@@ -363,4 +403,28 @@ struct Celsius {
 }
 
 let boiling = Celsius(100.0)
+```
+
+### Default Initializers
+The default initializer simply creates a new instance with all of its properties set to their default values.
+```swift
+class ShoppingList {
+    var name: String?
+    var quantity = 1
+    var purchased = false
+}
+
+var list = ShoppingList()
+```
+
+_Structure_ types automatically receive a _memberwise initializer_ if they don't define any of their own custom initializers.    
+You can omit values for any properties that have default values.
+```swift
+struct Size {
+    var width = 0.0, height = 0.0
+}
+
+let twoByTwo = Size(width: 2.0, height: 2.0)
+let threeByZero = Size(width: 3.0)
+let zeroByZero = Size()
 ```
