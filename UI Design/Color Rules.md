@@ -1,9 +1,11 @@
 # 60-30-10 Color Rule
 
-## 60% - Base Color
+## Base /Primary Color - 60%
 
 Neutral color
 
-## 30% - Primary Color
+## Secondary Color - 30%
 
-## 10% - Secondary Color
+## Accent Color - 10%
+
+Action items
