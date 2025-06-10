@@ -189,7 +189,33 @@ They are attributes that can be set on any HTML element, includign elements in t
 - Providing a label or description for assistive technologies
 - Targeting styles with (high specificity or as attribute selectors) in CSS.
 
-`<label>`
+##### Link fragment identifier
+
+Links are not restricted to HTTP-based URLs; they can be **fragment identifiers** to sections of the page in the current document (or in other documents)
+
+When a URL includes a hash mar (`#`) followed by a string of characters, that string is a fragment identifier. If that string matches an `id` of an element in the web page, the fragment is an anchor, or bookmark, to that element.
+
+Setting `href="top`, case-insensitive, or simply `href=#`, will scroll the user to the top of the page.
+
+`#` is not part of the fragment identifier. It's always the last part of the URL and is not sent to the server.
+
+##### CSS selectors
+
+Is CSS, you can target each section using an id selector, such as `#feedback` or, for less specificity, a case-sensitive attribute selector, `[id="feedback]`.
+
+```html
+<div id="news">News</div>
+```
+
+```css
+#feedback {
+  color: red;
+}
+```
+
+##### Scripting
+
+##### `<label>`
 
 `<label>` has a `for` attribute that takes as its value the `id` of the form control with which it is associated.
 
