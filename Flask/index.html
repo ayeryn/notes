@@ -26,6 +26,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -53,7 +56,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -104,6 +114,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -215,9 +251,20 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../HTML/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -226,7 +273,65 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/html/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document Structure
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/html-attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attributes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -386,23 +491,23 @@
 
 
 <h1 id="running-app">Running app</h1>
-<pre><code class="language-console">$ flask --app &lt;app name&gt; run
-</code></pre>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>flask<span class="w"> </span>--app<span class="w"> </span>&lt;app<span class="w"> </span>name&gt;<span class="w"> </span>run
+</span></code></pre></div>
 <p>OR</p>
-<pre><code class="language-console">$ export FLASK_APP=&lt;app name&gt;
-$ flask run
-</code></pre>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">FLASK_APP</span><span class="o">=</span>&lt;app<span class="w"> </span>name&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="gp">$ </span>flask<span class="w"> </span>run
+</span></code></pre></div>
 <p>OR</p>
-<pre><code class="language-console">$ python &lt;app&gt;.py
-</code></pre>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>python<span class="w"> </span>&lt;app&gt;.py
+</span></code></pre></div>
 <h1 id="tips-and-tools">Tips and Tools</h1>
 <h2 id="random-text-generator-secrets-module">Random Text Generator (secrets module)</h2>
-<pre><code class="language-python">&gt;&gt;&gt; import secrets
-&gt;&gt;&gt; secrets.token_hex(&lt;byte&gt;)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">secrets</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">secrets</span><span class="o">.</span><span class="n">token_hex</span><span class="p">(</span><span class="o">&lt;</span><span class="n">byte</span><span class="o">&gt;</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="use-virtual-environment">Use Virtual Environment</h2>
-<pre><code class="language-console">$ python -m venv venv
-</code></pre>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span></code></pre></div>
 <h1 id="sqlalchemy">SQLAlchemy</h1>
 <h2 id="dbrelationship"><code>db.Relationship()</code></h2>
 <h3 id="lazy-parameter"><code>lazy</code> Parameter</h3>
@@ -426,24 +531,24 @@ if they already exist.</p>
 </ul>
 <h2 id="extract"><code>extract()</code></h2>
 <h2 id="python-repl-examples-gymlog">Python REPL Examples (GymLog)</h2>
-<pre><code class="language-python">&gt;&gt;&gt; from app import app, db
-&gt;&gt;&gt; app.app_context().push()
-&gt;&gt;&gt; db.create_all()
-&gt;&gt;&gt; from app import GymClass, Attendance
-&gt;&gt;&gt;
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">app</span><span class="p">,</span> <span class="n">db</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">()</span><span class="o">.</span><span class="n">push</span><span class="p">()</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">GymClass</span><span class="p">,</span> <span class="n">Attendance</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="o">&gt;&gt;&gt;</span>
+</span></code></pre></div>
 <h1 id="flask-migrate">flask-migrate</h1>
 <h2 id="how-to-add-flask-migrate-to-an-existing-project">How to add <code>flask-migrate</code> to an existing project?</h2>
 <ol>
 <li>At root directory, init the package
-   <code>console
-   $ flask db init</code></li>
+   <div class="language-console highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp">$ </span>flask<span class="w"> </span>db<span class="w"> </span>init
+</span></code></pre></div></li>
 </ol>
 <p>This command <strong>creates</strong> the database.</p>
 <ol>
 <li>Run the initial migration
-   <code>console
-   $ flask db migrate -m "Initial migration"</code></li>
+   <div class="language-console highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp">$ </span>flask<span class="w"> </span>db<span class="w"> </span>migrate<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial migration&quot;</span>
+</span></code></pre></div></li>
 </ol>
 <p>This command <strong>detects</strong> differences between the current <strong>database</strong> and
    <strong>models</strong> defined in your files, and <strong>generates</strong> migration script if there
@@ -452,19 +557,19 @@ if they already exist.</p>
    the command won't detect any changes, thus generating nothing\
    <code>INFO  [alembic.env] No changes in schema detected.</code></p>
 <p>Workaround: compare models to an empty database
-   <code>console
-   $ export DATABASE_URL=sqlite:///</code>
+   <div class="language-console highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">DATABASE_URL</span><span class="o">=</span>sqlite:///
+</span></code></pre></div>
    This command creates an empty database in memory.</p>
 <ol>
 <li>Run the upgrade. This command applies changes in the migration script to the
    database.
-   <code>console
-   $ flask db upgrade</code></li>
+   <div class="language-console highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gp">$ </span>flask<span class="w"> </span>db<span class="w"> </span>upgrade
+</span></code></pre></div></li>
 </ol>
 <p>a. If the database already exists and matches the current models, you can
    stamp the current database.
-   <code>console
-   $ flask db stamp head</code></p>
+   <div class="language-console highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp">$ </span>flask<span class="w"> </span>db<span class="w"> </span>stamp<span class="w"> </span>head
+</span></code></pre></div></p>
 <p>This command adds the alembic metadata to the database to indicate that the
    database is updated to the latest provision. Basically, stamp this database
    with the HEAD revision.</p>
@@ -472,11 +577,11 @@ if they already exist.</p>
 <p>A new column has been added to the table --</p>
 <ol>
 <li>Generate migration script
-   <code>console
-   $ flask db migrate</code></li>
+   <div class="language-console highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gp">$ </span>flask<span class="w"> </span>db<span class="w"> </span>migrate
+</span></code></pre></div></li>
 <li>Apply migration
-   <code>console
-   $ flask db upgrade</code></li>
+   <div class="language-console highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp">$ </span>flask<span class="w"> </span>db<span class="w"> </span>upgrade
+</span></code></pre></div></li>
 </ol>
 
 
@@ -526,7 +631,7 @@ if they already exist.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
