@@ -1,0 +1,7 @@
+site_name: My Notes
+theme:
+  name: material
+nav:
+  - Home: index.md
+  # - HTML: html.md
+  # - CSS: css.md
