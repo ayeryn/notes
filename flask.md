@@ -47,7 +47,28 @@ through relationships.
 
 ## `db.create_all()`
 
-## Python REPL Commands
+It is the command that creates database tables based on the models or classes
+defined in your application.<br>
+
+When your run your application and call `db.create_all()` _for the first time_,
+it will create the necessary tables. Subsequent runs _won't_ recreate the tables
+if they already exist.
+
+- Model Definitions
+- Database initialization
+- Table creation
+
+## `extract()`
+
+## Python REPL Examples (GymLog)
+
+```python
+>>> from app import app, db
+>>> app.app_context().push()
+>>> db.create_all()
+>>> from app import GymClass, Attendance
+>>>
+```
 
 # flask-migrate
 
