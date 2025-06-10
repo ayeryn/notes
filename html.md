@@ -147,3 +147,54 @@ This is used to encompass generic standalone sections of a document when there i
 ```
 
 ![structure](https://web.dev/static/learn/html/headings-and-sections/image/a-layout-a-header-three-31026f6b6c4b4_856.png)
+
+## Attributes
+
+Attributes provide information about and functionality for the element. Attributes define the behavior, linkages, and functionality of elements.
+
+### Boolean attributes
+
+If one (or more) of these attributes is present, the element is disabled, required, readonly, etc. If not present, it isn't.
+
+Boolean values can either be omitted, set to an empty string, or be the name of the attribute. All values will resolve to true.
+
+```html
+<!-- They are equivalent -->
+<input required />
+<input required="" />
+<input required="required" />
+```
+
+When toggling between true and false, add and remove the attribute altogether with JavaScript rather than toggling the value.
+
+```js
+const myMedia = document.getElementById("mediaFile");
+myMedia.removeAttribute("muted");
+myMedia.setAttribute("muted");
+```
+
+### Enumerated attributes
+
+They have a limited set of predefined valid values.
+
+### Global attributes
+
+They are attributes that can be set on any HTML element, includign elements in the `<head>`. [Global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes#list_of_global_attributes)
+
+#### `<id>`
+
+- The target of a link's fragment identifier
+- Identifying an element for scripting
+- Associating a form element with its label
+- Providing a label or description for assistive technologies
+- Targeting styles with (high specificity or as attribute selectors) in CSS.
+
+`<label>`
+
+`<label>` has a `for` attribute that takes as its value the `id` of the form control with which it is associated.
+
+```html
+<label for="name">Name: </label><input id="name" type="text" name="name" /> >
+```
+
+The association between for and id makes the information available to users of assistive technologies. In addition, clicking anywhere on a label gives focus to the associated element, extending the control's click area.
