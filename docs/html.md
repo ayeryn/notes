@@ -201,14 +201,14 @@ Setting `href="top`, case-insensitive, or simply `href=#`, will scroll the user 
 
 ##### CSS selectors
 
-Is CSS, you can target each section using an id selector, such as `#feedback` or, for less specificity, a case-sensitive attribute selector, `[id="feedback]`.
+Is CSS, you can target each section using an id selector, such as `#news` or, for less specificity, a case-sensitive attribute selector, `[id="news]`.
 
-```html
+```html title="index.html"
 <div id="news">News</div>
 ```
 
-```css
-#feedback {
+```css title="style.css"
+#news {
   color: red;
 }
 ```
