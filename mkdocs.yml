@@ -17,7 +17,9 @@ theme:
         name: Switch to light mode
 nav:
   - Home: index.md
-  - HTML: HTML.md
+  - HTML:
+      - Document Structure: html/html.md
+      - Attributes: html/html-attributes.md
   - CSS: CSS.md
   - JavaScript: JavaScript.md
   - Github: Github.md
