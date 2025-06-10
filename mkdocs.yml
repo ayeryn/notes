@@ -3,5 +3,9 @@ theme:
   name: material
 nav:
   - Home: index.md
-  # - HTML: html.md
-  # - CSS: css.md
+  - HTML: HTML.md
+  - CSS: CSS.md
+  - JavaScript: JavaScript.md
+  - Github: Github.md
+  - Flask: Flask.md
+  - C++: cpp.md
