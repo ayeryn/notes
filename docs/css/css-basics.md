@@ -1,4 +1,4 @@
-# CSS Basics
+# CSS Styling
 
 Cascading Style Sheets.
 
@@ -47,6 +47,40 @@ Adding the `style` attribute directly onto an element. **Avoid if possible**.
      color: green;
    }
    ```
+
+## Handling Conflicts
+
+### Order of overriding declarations ❗
+
+1. Declarations in user agent style sheets (e.g., the browser's default styles, used when no other styling is set).
+2. Normal declarations in user style sheets (custom styles set by a user)
+3. Normal declarations in author style sheets (these are the styles set by us, the web developers)
+4. Import declarations in author style sheets
+5. Import declarations in user style sheets
+6. Import declarations in user agent style sheets
+
+### Cascade
+
+There are three factors to consider, listed here in increasing order of importance. Later ones overrule earlier ones:
+
+1. Source order
+2. Specificity
+3. Importance
+
+### Specificity
+
+- Element selectors, pseudo-element selectors
+- Class selectors, attribute selectors, pseudo-classes
+
+### Inheritance
+
+Some property values are inherit and some are not.
+
+- `inherit`
+- `initial`
+- `revert`
+- `revert-layer`
+- `unset`
 
 ## Transition
 

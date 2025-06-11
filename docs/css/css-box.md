@@ -99,3 +99,96 @@ Use it if you don't want an item to break onto a new line, but to respect `width
 
 - `width` and `height` are respected
 - `padding`, `margin`, and `border` will cause other elements to be pushed away from the box.
+
+## Float
+
+A float is removed from normal flow and other elements will display beside it.
+
+It can be cleared with `clear: left/right/both`.
+
+### `display: flow-root`
+
+It makes the element behave like a `block` and contain its floating children properly.
+
+#### Before
+
+![before](img/float-before.png)
+
+```html title="index.html"
+<h1>Float example</h1>
+<div class="wrapper">
+  <div class="box">Float1</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus</p>
+</div>
+
+<p>
+  Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+  orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornar
+</p>
+```
+
+```css title="style.css"
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+.box {
+  float: left;
+  margin-right: 15px;
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgb(207 232 220);
+  padding: 1em;
+}
+
+.wrapper {
+  background-color: rgb(148 255 172);
+  padding: 10px;
+  color: purple;
+}
+```
+
+#### After
+
+![after](img/float-after.png)
+
+```css title="style.css"
+.wrapper {
+  background-color: rgb(148 255 172);
+  padding: 10px;
+  color: purple;
+  display: flow-root;
+}
+```
+
+## Positioning
+
+### Relative positioning
+
+### Absolute positioning
+
+It removes the element from the normal flow and create a layer for itself. Very useful for implementing UI elements separated from the rest of the page, dnd etc.
+
+### Introducing z-index
+
+### Fixed positioning
+
+For creating UI fixed in place no matter the size of the viewport. It's in relation to the VP.
+
+### Sticky positioning
+
+## Flex
+
+- If they have children, the children are flex items
+  - Child elements will NOT begin on new lines
+- A dic with the declaration `display: flex;` will remain block-level - it occupies its own line.
+
+<img src='img/flexbox.png' width='300' />
+
+### `justify-content`
+
