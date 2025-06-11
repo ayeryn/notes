@@ -12,7 +12,7 @@
         <link rel="prev" href="../html-attributes/">
       
       
-        <link rel="next" href="../../CSS/">
+        <link rel="next" href="../../cpp/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -406,6 +406,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#quotes-and-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quotes and citations
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -429,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CSS/" class="md-nav__link">
+      <a href="../../CSS.md" class="md-nav__link">
         
   
   
@@ -451,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../JavaScript/" class="md-nav__link">
+      <a href="../../JavaScript.md" class="md-nav__link">
         
   
   
@@ -473,29 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Github/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Github
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Flask/" class="md-nav__link">
+      <a href="../../Flask.md" class="md-nav__link">
         
   
   
@@ -567,6 +554,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#quotes-and-citations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quotes and citations
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -587,7 +583,47 @@
 <h2 id="headings">Headings</h2>
 <p>By default, browsers style <code>&lt;h1&gt;</code> the largest, <code>&lt;h2&gt;</code> slightly smaller, with each subsequent heading level being smaller by default.</p>
 <p>Browsers by default also decrement the <code>&lt;h1&gt;</code> font size based on how many <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code>, or <code>&lt;section&gt;</code> elements it is nested in.</p>
-<p><img src="https://web.dev/static/learn/html/text-basics/image/nested-h1-examples-cc207f75ad01d_1920.png" width="300" /></p>
+<p><img src="https://web.dev/static/learn/html/text-basics/image/nested-h1-examples-cc207f75ad01d_1920.png" width="250" /></p>
+<p>To style nested <code>&lt;h1&gt;</code> elements:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">/* </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c">- Any &lt;h2&gt; elements</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c">- Any &lt;h1&gt; elements that are inside any &lt;article&gt;, &lt;aside&gt;, &lt;nav&gt;, or &lt;section&gt; */</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">h2</span><span class="o">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">:</span><span class="nd">is</span><span class="o">(</span><span class="nt">article</span><span class="o">,</span><span class="w"> </span><span class="nt">aside</span><span class="o">,</span><span class="w"> </span><span class="nt">nav</span><span class="o">,</span><span class="w"> </span><span class="nt">section</span><span class="o">)</span><span class="w"> </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c">/* </span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c">- Any h3 element</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c">- Any h1 that is inside a (article, aside, nav, section), which is itself inside a (article, aside, nav, section) */</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">h3</span><span class="o">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">:</span><span class="nd">is</span><span class="o">(</span><span class="nt">article</span><span class="o">,</span><span class="w"> </span><span class="nt">aside</span><span class="o">,</span><span class="w"> </span><span class="nt">nav</span><span class="o">,</span><span class="w"> </span><span class="nt">section</span><span class="o">)</span><span class="w"> </span><span class="p">:</span><span class="nd">is</span><span class="o">(</span><span class="nt">article</span><span class="o">,</span><span class="w"> </span><span class="nt">aside</span><span class="o">,</span><span class="w"> </span><span class="nt">nav</span><span class="o">,</span><span class="w"> </span><span class="nt">section</span><span class="o">)</span><span class="w"> </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>:is()</code> is a CSS pseudo-class for grouping selectors, making them easier to write and more efficient.</p>
+<p><code>:is(a, b, c)</code> matches any element that matches selector a, b, or c.</p>
+<h2 id="quotes-and-citations">Quotes and citations</h2>
+<ol>
+<li><code>&lt;blockquote&gt;</code></li>
+<li><code>&lt;q&gt;</code></li>
+<li><code>&lt;cite&gt;</code></li>
+</ol>
+<p><img src='img/quotes.png' width='400' /></p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Quotes and Citations<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>blockquote<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      “She is a friend of my mind. She gather me, man. The pieces I am, she
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      gather them and give them back to me in all the right order. It&#39;s good,
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      you know, when you got a woman who is a friend of your mind.”
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>cite<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>To be or not to be, that is the question.<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>q<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">q</span><span class="p">&gt;</span>This is a quote.<span class="p">&lt;/</span><span class="nt">q</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></code></pre></div>
 
 
 
