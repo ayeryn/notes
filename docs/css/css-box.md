@@ -190,5 +190,10 @@ For creating UI fixed in place no matter the size of the viewport. It's in relat
 
 <img src='img/flexbox.png' width='300' />
 
-### `justify-content`
+### `justify-content` - horizontal
 
+This dictates how items are positioned from left to right, aka on the _main axis_.
+
+### `align-items` - vertical
+
+### `z-axis` - front to back
