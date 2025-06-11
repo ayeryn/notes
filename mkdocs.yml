@@ -28,6 +28,7 @@ nav:
   - HTML:
       - Document Structure: html/html.md
       - Attributes: html/html-attributes.md
+      - Text Basics: html/html-text.md
   - CSS: CSS.md
   - JavaScript: JavaScript.md
   - Github: Github.md
