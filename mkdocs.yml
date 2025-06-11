@@ -29,10 +29,11 @@ nav:
       - Document Structure: html/html.md
       - Attributes: html/html-attributes.md
       - Text Basics: html/html-text.md
-  - CSS: CSS.md
-  - JavaScript: JavaScript.md
-  - Flask: Flask.md
-  - C++: cpp.md
+      - Other Content: html/html-forms.md
+  - CSS:
+      - Basics: css/css-basics.md
+  - JavaScript: js.md
+  - Flask: flask.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
