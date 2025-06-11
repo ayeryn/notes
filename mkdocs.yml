@@ -31,7 +31,6 @@ nav:
       - Text Basics: html/html-text.md
   - CSS: CSS.md
   - JavaScript: JavaScript.md
-  - Github: Github.md
   - Flask: Flask.md
   - C++: cpp.md
 markdown_extensions:
