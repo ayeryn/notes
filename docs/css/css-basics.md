@@ -1,8 +1,9 @@
-# CSS
+# CSS Basics
 
 ## Transition
 
 - `transition` is shorthand for:
+
   - `transition-property`
   - `transition-duration`
   - `transition-timing-function`
@@ -11,16 +12,16 @@
 - Always put it on the base class instead of modified class
 
 ```css
-#box{
-    background-color: lightskyblue;
-    width: 50%;
-    height: 50%;
-    /* put here instead of on hover */
-    transition: transform 1s ease-in 3s;
+#box {
+  background-color: lightskyblue;
+  width: 50%;
+  height: 50%;
+  /* put here instead of on hover */
+  transition: transform 1s ease-in 3s;
 }
 
 #box:hover {
-    transform: translateX(100%);
+  transform: translateX(100%);
 }
 ```
 
@@ -37,12 +38,12 @@ effect to.
 
 ```css
 div {
-    transition-property: width, height
+  transition-property: width, height;
 }
 
 div:hover {
-    width: 300px;
-    height: 400px;
+  width: 300px;
+  height: 400px;
 }
 ```
 
@@ -62,6 +63,7 @@ div:hover {
 ## Animation
 
 - `animation` is short for:
+
   - `animation-name` (_required_)
   - `animation-duration` (_required_)
   - `animation-timing-function`
@@ -74,21 +76,21 @@ div:hover {
 - Write it in the place where you want it to happen, i.e., on the modified class
 
 ```css
-#box{
-    background-color: lightskyblue;
-    width: 50%;
-    height: 50%;
-    transition: transform 1s ease-in 3s;
+#box {
+  background-color: lightskyblue;
+  width: 50%;
+  height: 50%;
+  transition: transform 1s ease-in 3s;
 }
 
 #box:hover {
-    animation: left-to-right 1s ease-in;
+  animation: left-to-right 1s ease-in;
 }
 
 @keyframes left-to-right {
-    100% {
-        transform: translateX(100%);
-    }
+  100% {
+    transform: translateX(100%);
+  }
 }
 ```
 
@@ -96,30 +98,30 @@ div:hover {
   gradually changing from one set of CSS styles to another
 
 ```css
-#box{
-    background-color: lightskyblue;
-    width: 50%;
-    height: 50%;
-    transition: transform 1s ease-in 3s;
+#box {
+  background-color: lightskyblue;
+  width: 50%;
+  height: 50%;
+  transition: transform 1s ease-in 3s;
 }
 
 #box:hover {
-    animation: left-to-right 1s ease-in;
+  animation: left-to-right 1s ease-in;
 }
 
 @keyframes left-to-right {
-    /* default state */
-    0% {
-        transform: translateX(0);
-    }
+  /* default state */
+  0% {
+    transform: translateX(0);
+  }
 
-    33% {
-        background-color: purple;
-        transform: translateY(100%)
-    }
+  33% {
+    background-color: purple;
+    transform: translateY(100%);
+  }
 
-    100% {
-        transform: translateX(100%);
-    }
+  100% {
+    transform: translateX(100%);
+  }
 }
 ```
