@@ -1,4 +1,4 @@
-# HTML Text Basics
+# Text and Links
 
 ## Headings
 
@@ -36,6 +36,7 @@ h3,
 2. `<q>`
 3. `<cite>`
 
+<!-- FIXME: image not loading on GHP -->
 <img src='img/quotes.png' width='400' />
 
 ```html
@@ -54,4 +55,60 @@ h3,
   <li>q</li>
   <li><q>This is a quote.</q></li>
 </ul>
+```
+
+### HTML Entities
+
+- `&copy;`: ©
+- `&trade;`: (™)
+
+## Hyperlinks
+
+Links can be created by `<a>`, `<area>`, `<form>`, and `<link>`.
+
+### The `href` attribute
+
+It's used to create hyperlinks to:
+
+1. locations within the current page
+2. other pages within a site
+3. other sites;
+4. it can also be coded to download files or send emails.
+
+```html
+<a href="http://mypage.com">My Page</a>
+<a href="#about">About Me</a>
+<a href="#top">Go to top.</a>
+<a href="http://mypage.com#about">About Me</a>
+<a href="mailto:help@mypage.com">Email me</a>
+<a href="tel:1234567889">Call me</a>
+```
+
+#### Types of URLs
+
+- **Absolute URLs** include a protocol (`http://`) and a domain name.
+- **Relative URLs** do not include a protocol or a domain name.
+  - relative to the current file
+
+#### Downloadable resources
+
+The `download` attribute should be included when the `href` points to a downloadable resource.
+
+#### Browsing context
+
+- `target`
+  - `_self`
+  - `_blank`
+  - `_parent`
+  - `top`
+- `nofollow`
+
+## Links and JS
+
+```js
+let a = document.links[0]; //obtain the first link in the document
+
+a.href = "newpage.html"; //change the destination URL of the link
+a.protocol = "ftp"; //change just the scheme part of the URL
+a.setAttribute("href", "http://google.com/"); // change the attribute content directly
 ```
