@@ -74,3 +74,28 @@ What is the actual dimension of `box`?
 To turn it on, set `box-sizing: border-box`.
 
 Any width is the width of the visible box on the page. The content area width is `width - padding - border`.
+
+## Margin
+
+Margins can be positive or negative; setting a negative value can cause it to overlap other things.
+
+### Margin collapsing
+
+It happens when you're creating space with margins and don't get the space you expect.
+
+- Two positive margins will combine to become one. Its size will be equal to the largest individual margin.
+- Two negative margins will collapse and the smallest (furthest from zero) value will be used.
+- If one margin is negative, its value will be subtracted from the total.
+
+## Padding
+
+It sits between the border and the content area and is used to push the content away from the border. It cannot be negative.
+
+## `inline-block`
+
+`display: inline-block` is a special value of `display`, which provides a middle ground between `inline` and `block`.
+
+Use it if you don't want an item to break onto a new line, but to respect `width` and `height` and avoid overlapping.
+
+- `width` and `height` are respected
+- `padding`, `margin`, and `border` will cause other elements to be pushed away from the box.
