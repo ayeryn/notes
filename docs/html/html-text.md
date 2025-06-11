@@ -1,4 +1,4 @@
-# Text and Links
+# Text, Links, and Lists
 
 ## Headings
 
@@ -112,3 +112,9 @@ a.href = "newpage.html"; //change the destination URL of the link
 a.protocol = "ftp"; //change just the scheme part of the URL
 a.setAttribute("href", "http://google.com/"); // change the attribute content directly
 ```
+
+## Lists
+
+- [Lists](https://web.dev/learn/html/lists)
+
+<!-- TODO: come back and review if time permits -->
