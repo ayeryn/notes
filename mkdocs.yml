@@ -32,6 +32,8 @@ nav:
       - Other Content: html/html-forms.md
   - CSS:
       - Basics: css/css-basics.md
+      - Selectors: css/css-selectors.md
+      - Box Model: css/css-box.md
   - JavaScript: js.md
   - Flask: flask.md
 markdown_extensions:

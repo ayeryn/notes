@@ -1,5 +1,53 @@
 # CSS Basics
 
+Cascading Style Sheets.
+
+## Styling
+
+### External stylesheets
+
+Within `<head>`, link to a separate CSS file.
+
+```html
+<head>
+  <link rel="stylesheet" href="style.css" />
+  ...
+</head>
+```
+
+### Internal stylesheets
+
+Within `<head>`, contained within `<style>`.
+
+```html
+<head>
+  <style>
+    h1 {
+      color: red;
+    }
+  </style>
+</head>
+```
+
+### Inline styling
+
+Adding the `style` attribute directly onto an element. **Avoid if possible**.
+
+## Selectors
+
+<!-- TODO: finish review -->
+
+1. Element selector (type selector): directly matches an HTML element name
+
+   1. Multiple selectors can be targeted at once:
+
+   ```css
+   p,
+   li {
+     color: green;
+   }
+   ```
+
 ## Transition
 
 - `transition` is shorthand for:
