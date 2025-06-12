@@ -22,4 +22,18 @@ If the rows of the `grid` can be expanded and collapsed, use `role="treegrid`.
 
 ## Forms
 
+### `<input>`
+
+- **Outside of form**: useful for search bars, filters, etc.
+- **Inside of form**
+  - Enter-to-submit
+  - form validation
+  - working with `<input type="submit">` to actually work
+
+### `submit`
+
+1. The browser gathers all input values
+   - Fields with `name` attributes are collected
+   - Data is serialized into a string
+
 <!-- TODO: review -->

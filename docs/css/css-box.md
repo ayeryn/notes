@@ -1,4 +1,4 @@
-# Box and Layout
+# Layout
 
 Everything in CSS has a box around it.
 
@@ -184,16 +184,82 @@ For creating UI fixed in place no matter the size of the viewport. It's in relat
 
 ## Flex
 
+```css
+body {
+  display: flex;
+}
+```
+
+- Flexbox is very common among CSS styling
 - If they have children, the children are flex items
   - Child elements will NOT begin on new lines
 - A dic with the declaration `display: flex;` will remain block-level - it occupies its own line.
 
 <img src='img/flexbox.png' width='300' />
 
-### `justify-content` - horizontal
+### Main Axis (horizontal)
 
-This dictates how items are positioned from left to right, aka on the _main axis_.
+- `justify-content`: how items are positioned from left to right.
+- `flex-wrap`
+- `flex-grow`
+- `flex-shrink`
 
-### `align-items` - vertical
+### Cross Axis (vertical)
 
-### `z-axis` - front to back
+- `align-items`:
+- `align-content` spaces rows from top to bottom if there are multiple rows.
+
+### `z-axis` (depth)
+
+## Grid
+
+Whereas Flexbox is mostly useful for positioning items in a one-dimensional layout, CSS grid is most useful for **two-dimensional** layouts, providing many tools for aligning and moving elements across both rows and columns.
+
+### `grid-template`
+
+This is to be used on the _grid container_.
+
+- `grid-template-rows`
+- `grid-template-columns`
+
+#### `fr` (fraction)
+
+`1fr` means 1 fraction of the **available/remaining space**, which is the space to fill minus the base sizes of the non-flexible grid tracks. Such as -
+
+- paddings
+- borders
+- gaps between grid items
+- columns/rows with fixed sizes (e.g. 100px, 25%)
+
+```cs
+.container {
+  display: grid;
+  grid-template-rows: 3fr 4fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+```
+
+It can be used with `repeat()`.
+
+```css
+grid-template-rows: repeat(2, 20px 50px)
+grid-template-columns: repeat(3, 1fr);
+```
+
+### `grid-area`
+
+This is to be used on the _grid content_.
+
+`grid-area` is a combination attribute:
+
+1. grid-row-start
+2. grid-column-start
+3. grid-row-end
+4. grid-column-end
+
+```css
+.item {
+  /* row2-4, col3-8 */
+  grid-area: 2 / 3 / 4 / span 5;
+}
+```
