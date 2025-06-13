@@ -221,6 +221,7 @@ This is to be used on the _grid container_.
 
 - `grid-template-rows`
 - `grid-template-columns`
+- `grid-template-areas`
 
 #### `fr` (fraction)
 
