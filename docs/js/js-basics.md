@@ -33,3 +33,56 @@ A reference has to be made.
   <script type="module" src="script.js"></script>
 </head>
 ```
+
+## Functions
+
+### Arrow functions
+
+#### `function(){}` vs. `const func = ()=>{}`
+
+```js
+function func() {} // Function declaration
+const func = () => {}; // Arrow function expression
+```
+
+1. `this` binding
+
+   - `function` gets its own `this` (dynamic binding).
+   - Arrow function does NOT. It closes over the `this` from _where it was defined_.
+
+   ```js
+   const obj = {
+     val: 42,
+     regular: function () {
+       return this.val;
+     },
+     arrow: () => {
+       this.val;
+     },
+   };
+
+   console.log(obj.regular()); // 42
+   console.log(obj.arrow());
+   // undefined cuz this is from outside obj
+   ```
+
+2. `arguments` object
+   - Regular functions have access to the special `arguments` object
+3. Can be hoisted
+   - Regular function is hoisted - you can call it before it's defined.
+4. As constructors
+
+- `function` can be used with `new` to create objects.
+
+  ```js
+  function Person(name) {
+    this.name = name;
+  }
+  const p = new Person("Eryn"); // works
+
+  const Human = (name) => (this.name = name);
+  // const h = new Human("Eryn");
+  // TypeError: Human is not a constructor
+  ```
+
+#### Why are arrow functions preferred in web-dev?
