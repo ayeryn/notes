@@ -1,4 +1,4 @@
-# React
+# React Basics
 
 React is a popular open-source Javascript **library** used for building UIs or front-end applications
 
