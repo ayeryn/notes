@@ -76,3 +76,16 @@ useEffect(() => {
 ```
 
 ❗ The `return` statement does **NOT** run the cleanup function right away. It's simply returning the function to be used _when the component unmounts or the effect re-runs_.
+
+## Separation of components
+
+### Presentational/stateless
+
+- The presentational components' only job is to contain JSX
+- It should be exported
+- It should not render itself, because it will always get rendered by the container component
+- Stateless can still be reactive
+
+Container component passes information down to presentational components using `props`.
+
+In order for a presentation component to communicate changes to a container component, the container component must define and provide a way for the presentational component to communicate with it using a change handler function passed as a prop.
