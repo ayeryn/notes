@@ -1,29 +1,48 @@
-# React/Javascipt Notes
+# React
 
-## React
-
-- What is React?
-- React is a popular open-source Javascript **library** used for building UIs or front-end applications
+React is a popular open-source Javascript **library** used for building UIs or front-end applications
 
 - Key: reusable components
-- Components:
+- Components
 - Properties (Props)
+
+## Props
+
+Information that gets passed from one component to another is known as **prop**.
+
+## Hooks
+
+React Hooks, are functions that let us _manage the internal state of components and handle post-rendering side effects_ directly from our function components.
+
+Using Hooks, we can determine what we want to show the users by declaring how our user interface should look based on the state.
 
 ### State
 
 Always lift the state up to the parent component.  
 The parent component can pass that state back to the children via **props**. This keeps the child components in sync with each other and with their parent. _All children re-render automatically when parent changes._
 
-### `useState`
+#### `useState`
 
 A function that allows you to add state to functional components. It requires the initial value of the state and returns an array with two elements:
 
 1. current state value
 2. a function that allows you to update the state
 
-### Re-rendering a list
+```js
+import React, { useState } from "react";
 
-`Warning: Each child in a list should have a unique "key" prop.`
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount((count) => count + 1);
+  };
+}
+```
+
+#### Re-rendering a list
+
+🚨 Each child in a list should have a unique "key" prop.
 
 When a list is re-rendered, React takes each list item's ley and searches the previous list's items for a matching key.
 
@@ -37,4 +56,23 @@ Keys tell React about the identity of each component, which allows React to main
 
 When a element is created, React extracts the `key` property and sotres the key directly on the returned element. There's no way for a component to ask what `key` its parent specified.
 
-## JS
+### Effect
+
+This tells the page what to do when it re-renders. This can also contain cleanup actions.
+
+#### Cleaning up
+
+We don't want to incorrectly or accidentally accumulate hooks on the page every time it re-renders. Is this like garbage collection or deconstructions in java and cpp?
+
+```js
+useEffect(() => {
+  const handleClick = () => console.log("Click!");
+  window.addEventListener("click", handleClick);
+
+  return () => {
+    window.removeEventListener("click", handleClick);
+  };
+}, []);
+```
+
+❗ The `return` statement does **NOT** run the cleanup function right away. It's simply returning the function to be used _when the component unmounts or the effect re-runs_.
